@@ -217,14 +217,28 @@
             max-width: 1000px;
             margin: 0 auto 60px auto;
             gap: 40px;
+            flex-wrap: wrap;
         }
 
-        .project-image {
+        .project-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .project-item:nth-child(even) {
+            flex-direction: row;
+        }
+
+
+        .project-image,
+        .project-info {
             flex: 1;
         }
 
         .project-image img {
             width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
@@ -366,11 +380,16 @@
             }
 
             .project-item {
-                flex-direction: column;
+                flex-direction: column !important;
                 gap: 25px;
             }
 
-            .project-image,
+
+            .project-image img {
+                max-width: 90%;
+                height: auto;
+            }
+
             .project-info {
                 width: 100%;
             }
@@ -382,6 +401,7 @@
             .project-info p {
                 font-size: 15px;
             }
+
 
 
         }
@@ -421,6 +441,11 @@
             .skills-container h1 {
                 font-size: 28px;
                 margin-bottom: 30px;
+            }
+
+            .project-image img {
+                max-width: 90%;
+                height: auto;
             }
 
             .skill-card {
@@ -535,10 +560,9 @@
             <div class="project-info">
                 <h2>Mental Health ChatBot</h2>
                 <p>
-                    A simple web-based application consisting of interactive forms for tracking users' mental health
-                    data,
-                    including mood, sleep, and activity. Users can submit and review their information easily through
-                    a clean and responsive interface.
+                    A simple web-based application consisting of four forms for tracking users' mental health data,
+                    including mood, sleep, and activity. Built with Flask, HTML, CSS, and JavaScript, users can submit
+                    and review their information easily through a clean and responsive interface.
                 </p>
                 <a href="https://mental-health-chatbot-fhdh.onrender.com" target="_blank" class="view-project-btn"> View
                     Project</a>
@@ -546,9 +570,9 @@
         </div>
 
 
-        <div class="project-item" style="flex-direction: row-reverse;">
+        <div class="project-item">
             <div class="project-image">
-                <img src="./assets/Capture.PNG" alt="Appointments System">
+                <img src="./assets/Capture2.jpeg" alt="Appointments System">
             </div>
             <div class="project-info">
                 <h2>Appointments System</h2>
@@ -566,7 +590,7 @@
 
         <div class="project-item">
             <div class="project-image">
-                <img src="./assets/Capture2.PNG" alt="Contact Page">
+                <img src="./assets/Capture3.png" alt="Contact Page">
             </div>
             <div class="project-info">
                 <h2>Contact Page</h2>
@@ -581,7 +605,7 @@
             </div>
         </div>
 
-        <div class="project-item" style="flex-direction: row-reverse;">
+        <div class="project-item">
             <div class="project-image">
                 <img src="./assets/Capture4.PNG" alt="TaskFlow">
             </div>
@@ -609,7 +633,8 @@
                 Feel free to reach out to me via email or connect with me on LinkedIn.
             </p>
             <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-                <a href="mailto:yaqeenhazeem2003@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=yaqeenhazeem2003@gmail.com" target="_blank"
+                    class="contact-btn">Email Me</a>
                 <a href="https://www.linkedin.com/in/yaqeen-hazeem-2b4523376" target="_blank"
                     class="contact-btn">LinkedIn</a>
                 <a href="https://github.com/yaqeenHazeem" target="_blank" class="contact-btn">GitHub</a>
